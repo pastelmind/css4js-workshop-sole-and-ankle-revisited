@@ -3,8 +3,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import { COLORS } from '../../constants';
-
 import NavLink from '../NavLink';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -41,7 +39,7 @@ const Overlay = styled(DialogOverlay)`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: hsl(220deg 3% 20% / 0.8);
+  background-color: hsl(var(--color-gray-900-hsl) / 0.8);
 `;
 
 const Content = styled(DialogContent)`
@@ -54,7 +52,7 @@ const Content = styled(DialogContent)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${COLORS.white};
+  background-color: var(--color-white);
 `;
 
 const DismissButton = styled(UnstyledButton)`
@@ -80,7 +78,7 @@ const Footer = styled.footer`
 const FooterLink = styled.a`
   font-size: 0.875rem;
   text-decoration: none;
-  color: ${COLORS.gray['700']}
+  color: var(--color-gray-700)
 `;
 
 export default MobileMenu;

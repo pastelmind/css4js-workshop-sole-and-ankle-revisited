@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, GAPS, QUERIES } from '../../constants';
+import { GAPS, QUERIES } from '../../constants';
 import Icon from '../Icon';
 import Logo from '../Logo';
 import NavLink from '../NavLink';
@@ -59,7 +59,7 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px ${GAPS.responsiveSmall};
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
   overflow-x: scroll;
   overflow-y: hidden;
 `;
