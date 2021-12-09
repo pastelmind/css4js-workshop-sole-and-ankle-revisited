@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, GAPS, QUERIES, WEIGHTS } from '../../constants';
+import { COLORS, GAPS, QUERIES } from '../../constants';
 import Icon from '../Icon';
 import Logo from '../Logo';
+import NavLink from '../NavLink';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 import UnstyledButton from '../UnstyledButton';
@@ -39,7 +40,7 @@ const Header = () => {
           <UnstyledButton>
             <Icon id="search" />
           </UnstyledButton>
-          <UnstyledButton>
+          <UnstyledButton onClick={() => setShowMobileMenu(true)}>
             <Icon id="menu" />
           </UnstyledButton>
         </MobileNav>
@@ -83,18 +84,6 @@ const MobileNav = styled.nav`
 
 const Side = styled.div`
   flex: 1;
-`;
-
-const NavLink = styled.a`
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
-
-  &:first-of-type {
-    color: ${COLORS.secondary};
-  }
 `;
 
 export default Header;
