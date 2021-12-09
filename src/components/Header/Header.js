@@ -25,12 +25,12 @@ const Header = () => {
           <Logo />
         </Side>
         <Nav>
-          <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
+          <OurNavLink href="/sale">A Vendre</OurNavLink>
+          <OurNavLink href="/new">Nouvelles Versions</OurNavLink>
+          <OurNavLink href="/men">Hommes</OurNavLink>
+          <OurNavLink href="/women">Femmes</OurNavLink>
+          <OurNavLink href="/kids">Les Enfants</OurNavLink>
+          <OurNavLink href="/collections">Collections</OurNavLink>
         </Nav>
         <Side />
         <MobileNav>
@@ -57,19 +57,25 @@ const Header = () => {
 const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
-  padding: 18px ${GAPS.responsiveSmall};;
+  padding: 18px ${GAPS.responsiveSmall};
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: scroll;
+  overflow-y: hidden;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: ${GAPS.responsiveLarge};
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndBelow} {
     display: none;
   }
+`;
+
+const OurNavLink = styled(NavLink)`
+  min-width: max-content;
 `;
 
 const MobileNav = styled.nav`

@@ -18,6 +18,12 @@ export const GAPS = {
    * - @ 720px viewport width: maximum of 2rem == 32px
    */
   responsiveSmall: `clamp(1rem, 5vw - 0.25rem, 2rem)`,
+  /**
+   * gap is clamped to be:
+   * - @ 900px viewport width: minimum of 1.5rem == 24px
+   * - @ 1500px viewport width: maximum of 6rem == 96px
+   */
+  responsiveLarge: `clamp(1.5rem, 12vw - 5.25rem, 6rem)`,
 };
 
 export const COLORS = {
