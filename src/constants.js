@@ -1,3 +1,16 @@
+/** All units are in rems */
+export const BREAKPOINTS = {
+  phoneMax: 600 / 16,
+  tabletMax: 950 / 16,
+  laptopMax: 1300 / 16,
+};
+
+export const QUERIES = {
+  phoneAndBelow: `(max-width: ${BREAKPOINTS.phoneMax}rem)`,
+  tabletAndBelow: `(max-width: ${BREAKPOINTS.tabletMax}rem)`,
+  laptopAndBelow: `(max-width: ${BREAKPOINTS.laptopMax}rem)`,
+}
+
 export const COLORS = {
   white: 'hsl(0deg 0% 100%)',
   gray: {
