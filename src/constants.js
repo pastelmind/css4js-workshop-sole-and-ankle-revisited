@@ -11,6 +11,15 @@ export const QUERIES = {
   laptopAndBelow: `(max-width: ${BREAKPOINTS.laptopMax}rem)`,
 }
 
+export const GAPS = {
+  /**
+   * gap is clamped to be:
+   * - @ 400px viewport width: minimum of 1rem == 16px
+   * - @ 720px viewport width: maximum of 2rem == 32px
+   */
+  responsiveSmall: `clamp(1rem, 5vw - 0.25rem, 2rem)`,
+};
+
 export const COLORS = {
   white: 'hsl(0deg 0% 100%)',
   gray: {
